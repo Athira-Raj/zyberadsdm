@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider (No JS)</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section-zt {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Left Side - Text */
+        .testimonial-text-zt {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .testimonial-text-zt .h2-zt {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .testimonial-text-zt .h2-zt::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #3498db;
+        }
+
+        .testimonial-text-zt .p-zt {
+            font-size: 18px;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        /* Right Side - Slider (Pure CSS) */
+        .testimonial-slider-zt {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-container-zt {
+            display: flex;
+            width: 300%;
+            animation: slide-zt 15s infinite;
+        }
+
+        @keyframes slide-zt {
+            0%, 20% { transform: translateX(0); }
+            33.33%, 53.33% { transform: translateX(-33.33%); }
+            66.66%, 86.66% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Testimonial Box Styling */
+        .testimonial-box-zt {
+            min-width: 33.33%;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-box-zt:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .client-img-zt {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+        }
+
+        .testimonial-content-zt {
+            flex: 1;
+        }
+
+        .stars-zt {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-name-zt {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .reviewer-designation-zt {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .review-text-zt {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Navigation Dots (CSS-only) */
+        .slider-dots-zt {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .dot-zt {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot-zt:hover {
+            background: #3498db;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .testimonial-section-zt {
+                flex-direction: column;
+            }
+            
+            .testimonial-box-zt {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .client-img-zt {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="testimonial-section-zt">
+        <!-- Left Side - Text -->
+        <div class="testimonial-text-zt">
+            <h2 class="h2-zt">What Our Clients Say</h2>
+            <p class="p-zt">We take pride in delivering exceptional results. Here's what our clients say about working with us.</p>
+        </div>
+
+        <!-- Right Side - Auto-Sliding Testimonials -->
+        <div class="testimonial-slider-zt">
+            <div class="slider-container-zt">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-box-zt">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="client-img-zt">
+                    <div class="testimonial-content-zt">
+                        <div class="stars-zt">★★★★★</div>
+                        <h3 class="reviewer-name-zt">John Carter</h3>
+                        <p class="reviewer-designation-zt">CEO, TechSolutions</p>
+                        <p class="review-text-zt">"This agency transformed our digital presence. Our website traffic increased by 300% in just 3 months!"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-box-zt">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="client-img-zt">
+                    <div class="testimonial-content-zt">
+                        <div class="stars-zt">★★★★★</div>
+                        <h3 class="reviewer-name-zt">Sarah Johnson</h3>
+                        <p class="reviewer-designation-zt">Marketing Director, LuxeBrands</p>
+                        <p class="review-text-zt">"Their SEO strategies are unmatched. We've seen a 150% boost in organic leads within 6 months."</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-box-zt">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client" class="client-img-zt">
+                    <div class="testimonial-content-zt">
+                        <div class="stars-zt">★★★★★</div>
+                        <h3 class="reviewer-name-zt">Michael Lee</h3>
+                        <p class="reviewer-designation-zt">Founder, StartupX</p>
+                        <p class="review-text-zt">"The team is incredibly responsive. They helped us scale our ad campaigns with 80% less wasted spend."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="slider-dots-zt">
+                <a href="#testimonial1" class="dot-zt"></a>
+                <a href="#testimonial2" class="dot-zt"></a>
+                <a href="#testimonial3" class="dot-zt"></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
