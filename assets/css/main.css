@@ -1836,76 +1836,98 @@ section,
 
 
 
+ .containerza {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
 
-.containerza {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px;
-  align-items: center;
-  justify-content: center;
-}
+    .image-sectionza {
+      flex: 1;
+      padding: 20px;
+      min-width: 300px;
+    }
 
-.image-sectionza {
-  flex: 1;
-  padding: 20px;
-  min-width: 300px;
-}
+    .image-sectionza img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-.image-sectionza img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+    .content-sectionza {
+      flex: 1;
+      padding: 20px;
+      min-width: 300px;
+    }
 
-.content-sectionza {
-  flex: 1;
-  padding: 20px;
-  min-width: 300px;
-}
+    .content-sectionza h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-.content-sectionza h1 {
-  font-size: 48px;
-  font-weight: bold;
-  margin: 0 0 20px;
-}
+    #highlightza {
+      color: #96d900;
+      font-weight: bold;
+    }
 
-#highlightza {
-  color: #96d900;
-  font-weight: bold;
-}
+    .content-sectionza p {
+      font-size: 18px;
+      color: #333;
+      margin: 20px 0;
+    }
 
-.content-sectionza p {
-  font-size: 18px;
-  color: #333;
-  margin: 20px 0;
-}
+    .read-more-btnza {
+      display: inline-block;
+      background-color: #a5e613;
+      color: white;
+      font-size: 20px;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
 
-.read-more-btnza {
-  background-color: #a5e613;
-  color: rgb(196, 21, 21);
-  font-size: 20px;
-  padding: 12px 30px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-#aboutbuttonza{
-  color: white;
-}
-.read-more-btnza:hover {
-  background-color: black;
-}
+    .read-more-btnza:hover {
+      background-color: black;
+    }
 
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .content-sectionza h1 {
+        font-size: 32px;
+      }
 
+      .content-sectionza p {
+        font-size: 16px;
+      }
+
+      .read-more-btnza {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .containerza {
+        padding: 20px;
+      }
+
+      .content-sectionza h1 {
+        font-size: 26px;
+      }
+    }
 
 
 
 
 
 .sectionzs {
-  background: url('services-bg.png') no-repeat center center;
+  background: url('assets/img/services-bg.png') no-repeat center center;
   background-size: cover;
   padding: 80px 20px;
   position: relative;
